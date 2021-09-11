@@ -1,5 +1,6 @@
-// import firebase from "firebase";
-import firebase from "firebase/compat";
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCImHHf-PDyS_gSNUbfZpGAm_qMxZOvFDE",
@@ -10,10 +11,15 @@ const firebaseConfig = {
     appId: "1:400598264556:web:ea5512f284f60fd6aa93c9",
     measurementId: "G-K4N300B100"
 };
+
 const app = firebase.initializeApp(firebaseConfig);
+
 const auth = app.auth();
+
 const db = app.firestore();
+
 const googleProvider = new firebase.auth.GoogleAuthProvider();
+
 const signInWithGoogle = async () => {
     try {
         const res = await auth.signInWithPopup(googleProvider);
@@ -35,6 +41,7 @@ const signInWithGoogle = async () => {
         alert(err.message);
     }
 };
+
 const signInWithEmailAndPassword = async (email, password) => {
     try {
         await auth.signInWithEmailAndPassword(email, password);
@@ -43,6 +50,7 @@ const signInWithEmailAndPassword = async (email, password) => {
         alert(err.message);
     }
 };
+
 const registerWithEmailAndPassword = async (name, email, password) => {
     try {
         const res = await auth.createUserWithEmailAndPassword(email, password);
@@ -58,6 +66,7 @@ const registerWithEmailAndPassword = async (name, email, password) => {
         alert(err.message);
     }
 };
+
 const sendPasswordResetEmail = async (email) => {
     try {
         await auth.sendPasswordResetEmail(email);
@@ -67,9 +76,11 @@ const sendPasswordResetEmail = async (email) => {
         alert(err.message);
     }
 };
+
 const logout = () => {
     auth.signOut();
 };
+
 export {
     auth,
     db,

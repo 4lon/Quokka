@@ -7,7 +7,7 @@ import {
     Link
 } from "react-router-dom";
 import Homepage from "./screens/homepage/Homepage";
-// import Login from "./screens/login/Login"
+import Login from "./screens/login/Login"
 
 class App extends Component {
   render() {
@@ -15,8 +15,11 @@ class App extends Component {
         <Router>
             <div>
                 <Switch>
-                    <Route path="/">
+                    <Route exact path="/">
                         <Homepage />
+                    </Route>
+                    <Route path="/login">
+                        <Login />
                     </Route>
                 </Switch>
             </div>
