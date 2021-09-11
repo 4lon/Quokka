@@ -68,7 +68,8 @@ const text = {
 }
 
 const textOr = {
-    fontSize: '30px'
+    fontSize: '30px',
+    marginTop: '6px'
 }
 
 const button = {
