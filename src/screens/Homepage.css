@@ -1,0 +1,22 @@
+.Page {
+    position:relative;
+    margin-top: -112px;
+    height: 100vh;
+    background-image: url(background.png);
+    z-index: -1;
+}
+
+.Details {
+    width: 30rem;
+    position:absolute;
+    top: 0; bottom: 0; right: 0;
+    padding-right: 10rem;
+    margin: auto;
+    height: 50px;
+}
+
+.Heading{
+    color: white;
+    margin-top: 0;
+    padding: 2rem;
+}
