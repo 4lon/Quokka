@@ -1,4 +1,7 @@
-import React from 'react';
+import React, {useEffect, useState} from "react";
+import {auth, signInWithEmailAndPassword, signInWithGoogle} from "../../firebase";
+import {useAuthState} from "react-firebase-hooks/auth";
+import {Link, useHistory} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -8,41 +11,18 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import QuizCard from "./QuizCard";
 
-const drawerWidth = 240;
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-    },
-    appBar: {
-        zIndex: theme.zIndex.drawer + 1,
-    },
-    drawer: {
-        width: drawerWidth,
-        flexShrink: 0,
-    },
-    drawerPaper: {
-        width: drawerWidth,
-    },
-    menuHeading: {
-        marginBottom: 0,
-        marginLeft: 8,
-    },
-    drawerContainer: {
-        overflow: 'auto',
-    },
-    content: {
-        flexGrow: 1,
-        padding: theme.spacing(3),
-
-    },
-    media: {
-        height: 140,
-    },
-}));
-
 export default function Learn() {
     const classes = useStyles();
+    const [user, loading, error] = useAuthState(auth);
+    const history = useHistory();
+
+    useEffect(() => {
+        if (loading) {
+            // maybe trigger a loading screen
+            return;
+        }
+        if (!user) history.replace("/login");
+    }, [user, loading]);
 
     return (
         <div className={classes.root}>
@@ -85,3 +65,36 @@ export default function Learn() {
         </div>
     );
 }
+
+const drawerWidth = 240;
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+    },
+    appBar: {
+        zIndex: theme.zIndex.drawer + 1,
+    },
+    drawer: {
+        width: drawerWidth,
+        flexShrink: 0,
+    },
+    drawerPaper: {
+        width: drawerWidth,
+    },
+    menuHeading: {
+        marginBottom: 0,
+        marginLeft: 8,
+    },
+    drawerContainer: {
+        overflow: 'auto',
+    },
+    content: {
+        flexGrow: 1,
+        padding: theme.spacing(3),
+
+    },
+    media: {
+        height: 140,
+    },
+}));

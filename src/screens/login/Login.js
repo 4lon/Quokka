@@ -1,67 +1,9 @@
-<<<<<<< HEAD
-
-=======
 import Button from '@material-ui/core/Button';
->>>>>>> Jamie2
 import React, {useEffect, useState} from "react";
 import {Link, useHistory} from "react-router-dom";
 import {auth, signInWithEmailAndPassword, signInWithGoogle} from "../../firebase";
 import {useAuthState} from "react-firebase-hooks/auth";
 import './Login.css'
-
-// const Field = React.forwardRef(({label, type, placeholder}, ref) => {
-//     return (
-//         <div>
-//             <input ref={ref} type={type} style={inputStyle} placeholder={placeholder} />
-//         </div>
-//     );
-// });
-
-// const Form = ({onSubmit}) => {
-//     const usernameRef = React.useRef();
-//     const passwordRef = React.useRef();
-//     const handleSubmit = e => {
-//         e.preventDefault();
-//         const data = {
-//             username: usernameRef.current.value,
-//             password: passwordRef.current.value
-//         };
-//         onSubmit(data);
-//     };
-//     return (
-//         <form style={formStyle} onSubmit={handleSubmit} >
-//             <h2 style={text}>Log in</h2>
-//             <Field ref={usernameRef} label="Username:" type="text" placeholder="Email or username" />
-//             <Field ref={passwordRef} label="Password:" type="password" placeholder="Password" />
-//             <Button style={button} variant="contained" color='primary'>Log in</Button>
-            // <div style={wordBarAlign}>
-            //     <div style={wordBar}></div>
-            //     <h2 style={textOr}>Or</h2>
-            //     <div style={wordBar}></div>
-            // </div>
-//             <Button variant="contained" color='primary' onClick={signInWithGoogle}>Google</Button>
-//         </form>
-//     );
-// };
-
-// // Useage example:
-
-// const LoginApp = () => {
-//     const handleSubmit = data => {
-//         const json = JSON.stringify(data, null, 4);
-//         console.clear();
-//         console.log(json);
-//     };
-//     return (
-//         <div style={appStyle}>
-//             <Form onSubmit={handleSubmit} />
-//         </div>
-//     );
-// };
-
-
-
-// export default LoginApp;
 
 function Login() {
     const [email, setEmail] = useState("");
