@@ -7,9 +7,9 @@ import {
     Link
 } from "react-router-dom";
 import Homepage from "./screens/homepage/Homepage";
-// import Submission from "./screens/Learn/Submission";
-import Learn from "./screens/learn/Learn"
-// import Login from "./screens/login/Login"
+import Login from "./screens/login/Login"
+import Header from './screens/header/Header';
+import Learn from './screens/learn/Learn'
 
 class App extends Component {
   render() {
@@ -20,7 +20,12 @@ class App extends Component {
                     <Route exact path="/">
                         <Homepage />
                     </Route>
-
+                    <Route path="/login">
+                        <Login />
+                    </Route>
+                </Switch>
+                <Header/>
+                <Switch>
                     <Route path="/learn">
                         <Learn />
                     </Route>
