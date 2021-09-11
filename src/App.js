@@ -8,12 +8,18 @@ import {
 } from "react-router-dom";
 import Homepage from "./screens/homepage/Homepage";
 import Login from "./screens/login/Login"
+<<<<<<< HEAD
+=======
+import Header from './screens/header/Header';
+>>>>>>> Jamie2
 
 class App extends Component {
   render() {
     return (
         <Router>
             <div>
+
+                {/* <Header/> */}
                 <Switch>
                     <Route exact path="/">
                         <Homepage />

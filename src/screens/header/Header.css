@@ -1,0 +1,49 @@
+
+.headerLink {
+    list-style-type: none;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.headerLink:hover {
+    color: #FFF;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.linkWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00ABE1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    padding: 0 20px;
+}
+
+.logo:hover {
+    color: #FFF;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+img {
+    height: 50px;
+}
+
+.logoImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quokka {
+    padding-left: 30px;
+}

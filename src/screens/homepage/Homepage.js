@@ -7,15 +7,15 @@ class Homepage extends React.Component {
         return (
             <div className="Page">
                 <nav>
-                    <a href='localhost:3000'><h1 className="Heading">QUOKKA.IO</h1></a>
+                    <a href='localhost:3000' style={{textDecoration: "none"}}><h1 className="Heading">QUOKKA.IO</h1></a>
                 </nav>
                 <div className="Details">
                     <h1 style={{color:'white'}}>Where the world connects, share your language with others</h1>
-                    <Button variant="contained" href='#minecraft'
+                    <Button variant="contained" href='/login'
                             style={{backgroundColor: '#ff6f1b', color: '#FFFFFF', marginBottom: '1rem', width: '100%'}}>
                         <h3>create an account</h3>
                     </Button>
-                    <Button variant="outlined" href="#minecraft" style={{color: '#FFFFFF', width: '100%', borderColor: '#FFFFFF' }}>
+                    <Button variant="outlined" href="/login" style={{color: '#FFFFFF', width: '100%', borderColor: '#FFFFFF' }}>
                         <h3>login</h3>
                     </Button>
                 </div>
