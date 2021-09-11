@@ -15,7 +15,8 @@ class App extends Component {
     return (
         <Router>
             <div>
-                <Header/>
+
+                {/* <Header/> */}
                 <Switch>
                     <Route exact path="/">
                         <Homepage />
