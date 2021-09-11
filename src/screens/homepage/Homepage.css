@@ -1,18 +1,16 @@
 .Page {
     position:relative;
-    margin-top: -112px;
-    height: 100vh;
+    height: 100vH;
     background-image: url(background.png);
-    z-index: -1;
 }
 
 .Details {
     width: 30rem;
     position:absolute;
     top: 0; bottom: 0; right: 0;
-    padding-right: 10rem;
+    padding-right: 15rem;
     margin: auto;
-    height: 50px;
+    height: 400px;
 }
 
 .Heading{
