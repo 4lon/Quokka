@@ -10,6 +10,7 @@ import Homepage from "./screens/homepage/Homepage";
 import Login from "./screens/login/Login"
 import Header from './screens/header/Header';
 import Learn from './screens/learn/Learn'
+import Creator from './screens/creator/Creator'
 
 class App extends Component {
   render() {
@@ -29,6 +30,9 @@ class App extends Component {
                 <Switch>
                     <Route path="/learn">
                         <Learn />
+                    </Route>
+                    <Route path="/create">
+                        <Creator />
                     </Route>
                 </Switch>
             </div>

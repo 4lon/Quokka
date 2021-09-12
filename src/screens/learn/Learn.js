@@ -44,7 +44,7 @@ export default function Learn() {
                             </ListItem>
                         ))}
                     </List>
-                    <Divider />
+                    <Divider/>
                     <h2 className={classes.menuHeading}>My Resources</h2>
                     <List>
                         {/*Add list of created resources to*/}
@@ -54,7 +54,7 @@ export default function Learn() {
                             </ListItem>
                         ))}
                         <ListItem button component={Link} to="/create">
-                            <ListItemText primary="+ Create new" />
+                            <ListItemText primary="Create new" />
                         </ListItem>
                     </List>
                 </div>
@@ -83,16 +83,19 @@ const useStyles = makeStyles((theme) => ({
     drawer: {
         width: drawerWidth,
         flexShrink: 0,
+        zIndex: 1,
     },
     drawerPaper: {
         width: drawerWidth,
     },
     menuHeading: {
+        paddingTop: 20,
         marginBottom: 0,
-        marginLeft: 8,
+        // paddingLeft: 20,
     },
     drawerContainer: {
         overflow: 'auto',
+        paddingLeft: 30,
     },
     content: {
         flexGrow: 1,
