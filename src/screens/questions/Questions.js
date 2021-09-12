@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Questions.css';
-import mascot from './mascot.png';
-import Meat from './fod.png';
+import Meat from './meat.png';
 import Bread from './bread.jpg'
 import Fruits from './fruits.png'
 import Seafood from './seafood.png'

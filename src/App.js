@@ -34,10 +34,6 @@ class App extends Component {
                     <Route path="/create">
                         <Creator />
                     </Route>
-<<<<<<< HEAD
-
-=======
->>>>>>> santiago2
                     <Route path="/quiz">
                         <Questions />
                     </Route>
