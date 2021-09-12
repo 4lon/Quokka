@@ -6,6 +6,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { Link } from "react-router-dom";
 import QuizCard from "./QuizCard";
 
 const drawerWidth = 240;
@@ -36,9 +37,6 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(3),
 
     },
-    media: {
-        height: 140,
-    },
 }));
 
 export default function Learn() {
@@ -57,7 +55,7 @@ export default function Learn() {
                 <div className={classes.drawerContainer}>
                     <h2 className={classes.menuHeading}>Languages</h2>
                     <List>
-                        {['Irish Gaelic', 'Krymchak', 'Okanagan-Colville', 'Ts’ixa', 'Ainu', 'Rapa Nui', 'Andajin'].map((text, index) => (
+                        {['Yumplatok','Irish Gaelic', 'Krymchak', 'Okanagan-Colville', 'Ts’ixa', 'Ainu', 'Rapa Nui', 'Andajin'].map((text, index) => (
                             <ListItem button key={text}>
                                 <ListItemText primary={text} />
                             </ListItem>
@@ -66,19 +64,23 @@ export default function Learn() {
                     <Divider />
                     <h2 className={classes.menuHeading}>My Resources</h2>
                     <List>
-                        {['+ Create new'].map((text, index) => (
+                        {/*Add list of created resources to*/}
+                        {[].map((text, index) => (
                             <ListItem button key={text}>
                                 <ListItemText primary={text} />
                             </ListItem>
                         ))}
+                        <ListItem button component={Link} to="/create">
+                            <ListItemText primary="+ Create new" />
+                        </ListItem>
                     </List>
                 </div>
             </Drawer>
             <main className={classes.content}>
                 <Toolbar />
                 <QuizCard
-                    title="Garbage"
-                    language="JavaScript"
+                    title="Aboriginal"
+                    language="Aboriginal"
                     difficulty="Pretty much impossible"
                 />
             </main>
