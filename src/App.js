@@ -10,7 +10,8 @@ import Homepage from "./screens/homepage/Homepage";
 import Login from "./screens/login/Login"
 import Header from './screens/header/Header';
 import Learn from './screens/learn/Learn'
-import Creator from './screens/creator/Creator'
+import Creator from './screens/creator/Create'
+import Questions from "./screens/questions/Questions";
 
 class App extends Component {
   render() {
@@ -33,6 +34,9 @@ class App extends Component {
                     </Route>
                     <Route path="/creator">
                         <Creator />
+                    </Route>
+                    <Route path="/quiz">
+                        <Questions />
                     </Route>
                 </Switch>
             </div>
