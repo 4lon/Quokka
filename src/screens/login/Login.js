@@ -4,6 +4,7 @@ import {Link, useHistory} from "react-router-dom";
 import {auth, signInWithEmailAndPassword, signInWithGoogle} from "../../firebase";
 import {useAuthState} from "react-firebase-hooks/auth";
 import './Login.css'
+import {TextField, Typography} from "@material-ui/core";
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -27,20 +28,23 @@ function Login() {
 
                     <h2 style={text}>Log in</h2>
                     <div>
-                        <input
-                            type="text"
-                            className="login__textBox"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder="E-mail Address"
-                        />
-                        <input
-                            type="password"
-                            className="login__textBox"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            placeholder="Password"
-                        />
+                        <TextField id="outlined-basic" label="E-mail Address" variant="outlined" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <h3></h3>
+                        <TextField id="outlined-basic" label="Password" variant="outlined" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        {/*<input*/}
+                        {/*    type="text"*/}
+                        {/*    className="login__textBox"*/}
+                        {/*    value={email}*/}
+                        {/*    onChange={(e) => setEmail(e.target.value)}*/}
+                        {/*    placeholder="E-mail Address"*/}
+                        {/*/>*/}
+                        {/*<input*/}
+                        {/*    type="password"*/}
+                        {/*    className="login__textBox"*/}
+                        {/*    value={password}*/}
+                        {/*    onChange={(e) => setPassword(e.target.value)}*/}
+                        {/*    placeholder="Password"*/}
+                        {/*/>*/}
                     </div>
                     <Button style={button} variant="contained" onClick={() => signInWithEmailAndPassword(email, password)} color='primary'>Log in</Button>
                     <div style={wordBarAlign}>
@@ -49,13 +53,14 @@ function Login() {
                         <div style={wordBar}></div>
                     </div>
                     <Button style={button} variant="contained" onClick={() => signInWithGoogle()} color='primary'>Google</Button>
-
-                    <div>
-                        <Link to="/reset">Forgot Password?</Link>
-                    </div>
-                    <div>
-                        Don't have an account? <Link to="/register">Register</Link> now.
-                    </div>
+                    <h1></h1>
+                    <Typography>
+                    {/*<i>*/}
+                        <Link to="/reset" style={link}>Forgot Password?</Link><br></br>
+                    {/*<div>*/}
+                        Don't have an account? <Link to="/register" style={link}>Register</Link> now.
+                    </Typography>
+                    {/*</div>*/}
                 </div>
             </div>
         </div>
@@ -75,7 +80,7 @@ const formStyle = {
     borderRadius: '20px',
     // background: "#00ABE1",
     background: "white",
-    width: '400px',
+    width: '600px',
     display: 'block',
     textAlign: 'center',
     position: "absolute",
@@ -137,6 +142,10 @@ const textOr = {
 
 const button = {
     margin: "20px 0"
+}
+
+const link = {
+    textDecoration: "none"
 }
 
 export default Login;
