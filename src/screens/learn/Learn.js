@@ -12,7 +12,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import {AddBox} from "@material-ui/icons";
 import QuizCard from "./QuizCard";
-import Carousel from "react-simply-carousel";
 // import Slider from "./NetflixSlider";
 import FlagCard from "./FlagCard";
 
