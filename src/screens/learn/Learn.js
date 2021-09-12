@@ -78,16 +78,19 @@ const useStyles = makeStyles((theme) => ({
     drawer: {
         width: drawerWidth,
         flexShrink: 0,
+        zIndex: 1,
     },
     drawerPaper: {
         width: drawerWidth,
     },
     menuHeading: {
+        paddingTop: 20,
         marginBottom: 0,
-        marginLeft: 8,
+        // paddingLeft: 20,
     },
     drawerContainer: {
         overflow: 'auto',
+        paddingLeft: 30,
     },
     content: {
         flexGrow: 1,
