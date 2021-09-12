@@ -10,6 +10,13 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import './Creator.css';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import { Typography } from "@material-ui/core";
+import TextField from '@material-ui/core/TextField';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import Button from '@material-ui/core/Button';
 
 export default function Creator() {
     const classes = useStyles();
@@ -47,6 +54,57 @@ export default function Creator() {
             </Drawer>
             <main className={classes.content}>
                 {/* <Toolbar /> */}
+                <h1 className='creation-page-title'>Resource Creation</h1>
+                <div className='resource-underline'></div>
+                <div>
+                    <Card className='card-container'>
+                        <div className="question-title">
+                            <TextField className="question-title-input" label="Add Title..." variant="outlined" />
+                        </div>
+                        <div className="question">
+                            <TextField className="question-input" label="Enter question" variant="outlined" />
+                        </div>
+                
+                    {/* <div className='card-container'> */}
+                    
+                        <div className='card-row'>
+                            <Card>
+                                <CardContent className='card-content'>
+                                    <HelpOutlineIcon style={{ fontSize: 100 }} className='help-outline-icon'/>
+                                    <TextField id="outlined-basic" label="Enter your word" variant="outlined" />
+                                </CardContent>
+                            </Card>
+                            <Card>
+                                <CardContent className='card-content'>
+                                    <HelpOutlineIcon style={{ fontSize: 100 }} className='help-outline-icon'/>
+                                    <TextField id="outlined-basic" label="Enter your word" variant="outlined" />
+                                </CardContent>
+                            </Card>
+                        </div>
+                        
+                        <div className='card-row'>
+                            <Card>
+                                <CardContent className='card-content'>
+                                    <HelpOutlineIcon style={{ fontSize: 100 }} className='help-outline-icon'/>
+                                    <TextField id="outlined-basic" label="Enter your word" variant="outlined" />
+                                </CardContent>
+                            </Card>
+                            <Card>
+                                <CardContent className='card-content'>
+                                    <HelpOutlineIcon style={{ fontSize: 100 }} className='help-outline-icon'/>
+                                    <TextField id="outlined-basic" label="Enter your word" variant="outlined" />
+                                </CardContent>
+                            </Card>
+                        </div>
+                    {/* </div> */}
+                    </Card>
+
+                </div>
+                <div className='submit-button-wrapper'>
+                    <Button className='submit-button' variant="contained" color="primary">
+                        Submit Resource
+                    </Button>
+                </div>
             </main>
         </div>
     );
