@@ -10,8 +10,6 @@ import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import {makeStyles} from "@material-ui/core/styles";
 
-const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -22,36 +20,20 @@ const useStyles = makeStyles((theme) => ({
             transform: "scale3d(1.05, 1.05, 1)"
         },
     },
-    appBar: {
-        zIndex: theme.zIndex.drawer + 1,
-    },
-    drawer: {
-        width: drawerWidth,
-        flexShrink: 0,
-    },
-    drawerPaper: {
-        width: drawerWidth,
-    },
-    menuHeading: {
-        marginBottom: 0,
-        marginLeft: 8,
-    },
-    drawerContainer: {
-        overflow: 'auto',
-    },
-    content: {
-        flexGrow: 1,
-        padding: theme.spacing(3),
-
-    },
     media: {
         height: 140,
     },
 }));
 
-function GetPic(props) {
-    if (props.name === "Aboriginal") {
+function GetPic(name) {
+    if (name === "Andaijin") {
         return Aboriginal
+    } else if (name === "Maori") {
+        return Maori
+    } else if (name === "Guarani") {
+        return Para
+    } else if (name === "Yumplatok") {
+        return Torres
     }
 }
 
@@ -63,7 +45,7 @@ export default function QuizCard(props) {
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image={Aboriginal}
+                    image={GetPic(props.language)}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
