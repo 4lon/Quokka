@@ -12,14 +12,12 @@ import Header from './screens/header/Header';
 import Learn from './screens/learn/Learn'
 import Creator from './screens/creator/Creator'
 import Questions from "./screens/questions/Questions";
-// import Login from "./screens/login/Login"
 
 class App extends Component {
   render() {
     return (
         <Router>
             <div>
-
                 <Switch>
                     <Route exact path="/">
                         <Homepage />
