@@ -1,47 +1,29 @@
 import React, {Component} from 'react';
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
-import Maori from "./flags/Maori.svg"
-import Para from "./flags/Paraguay.jpg"
-import Aboriginal from "./flags/Aboriginal.png"
-import Torres from "./flags/Torres.png"
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import {makeStyles} from "@material-ui/core/styles";
 import GetPic from "./flags/GetPic";
 
-
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
-        width: '31.33%',
-        // margin: 'auto',
+        width: '9%',
         float: 'left',
-        margin: '1%',
+        margin: '0.47%',
         transition: "transform 0.15s ease-in-out",
         "&:hover": {
             transform: "scale3d(1.05, 1.05, 1)"
         },
     },
     media: {
-        height: 140,
+        height: 100,
     },
 }));
 
-// function GetPic(name) {
-//     if (name === "Andaijin") {
-//         return Aboriginal
-//     } else if (name === "Maori") {
-//         return Maori
-//     } else if (name === "Guarani") {
-//         return Para
-//     } else if (name === "Yumplatok") {
-//         return Torres
-//     }
-// }
-
-export default function QuizCard(props) {
+export default function FlagCard(props) {
     const classes = useStyles();
 
     return (
@@ -53,10 +35,7 @@ export default function QuizCard(props) {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        {props.title}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Language: {props.language} | Difficulty: {props.difficulty}
+                        {props.language}
                     </Typography>
                 </CardContent>
             </CardActionArea>
