@@ -1,7 +1,7 @@
-.Page {
+.HomePage {
     position:relative;
     height: 100vH;
-    background-image: url(background.png);
+    background-image: url(./background.png);
 }
 
 .Details {

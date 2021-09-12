@@ -5,7 +5,7 @@ import {Button} from '@material-ui/core';
 class Homepage extends React.Component {
     render() {
         return (
-            <div className="Page">
+            <div className="HomePage">
                 <nav>
                     <a href='localhost:3000' style={{textDecoration: "none"}}><h1 className="Heading">QUOKKA.IO</h1></a>
                 </nav>
