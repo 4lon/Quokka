@@ -34,7 +34,7 @@ class App extends Component {
                     <Route path="/create">
                         <Creator />
                     </Route>
-                    <Route path="/quiz/1">
+                    <Route path="/quiz">
                         <Questions />
                     </Route>
                 </Switch>
