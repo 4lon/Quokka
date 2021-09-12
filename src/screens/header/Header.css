@@ -4,11 +4,15 @@
     padding: 0 20px;
     font-size: 20px;
     color: #FFF;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .headerLink:hover {
     color:black;
+    font-size: 1.3rem;
     cursor: pointer;
+    font-weight: 700;
     transition: ease-in-out 0.2s;
 }
 
