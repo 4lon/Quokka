@@ -6,12 +6,12 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import Homepage from "./screens/homepage/Homepage";
 import Login from "./screens/login/Login"
 import Header from './screens/header/Header';
 import Learn from './screens/learn/Learn'
-import Creator from './screens/creator/Creator'
+import Creator from './screens/creator/Create'
 import Questions from "./screens/questions/Questions";
-import Homepage from "./screens/homepage/Homepage"
 
 class App extends Component {
   render() {
@@ -33,6 +33,10 @@ class App extends Component {
                     </Route>
                     <Route path="/create">
                         <Creator />
+                    </Route>
+
+                    <Route path="/quiz/1">
+                        <Questions />
                     </Route>
                 </Switch>
             </div>
